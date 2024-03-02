@@ -3,18 +3,26 @@ from llist import LList, Node, append
 
 def length(lst):
     """return the length of a finite linked list"""
-    pass  # delete this line when you add your code
+    length = 0
+    current = lst.head
+    while current:
+        current = current.next
+        length += 1
+    return length
 
 
 def llprint(lst):
     """print a finite linked list"""
-    pass  # delete this line when you add your code
-
+    current = lst.head
+    while current:
+        print(current.val, end=' -> ')
+        current = current.next
+    print("Null")
 
 if __name__ == "__main__":
 
-    pass  # delete this line when you add your code below
-
-    #
-    # your tests go here
-    #
+    LinkedList = LList()
+    values = [1,2,4,8,16,32,64,128,256,512]
+    for val in values:
+        append(LinkedList, Node(val))
+    llprint(LinkedList)
