@@ -8,7 +8,8 @@ def length(lst):
     while current:
         current = current.next
         length += 1
-    return length
+
+    print("Linked List length =", length)
 
 
 def llprint(lst):
@@ -26,3 +27,7 @@ if __name__ == "__main__":
     for val in values:
         append(LinkedList, Node(val))
     llprint(LinkedList)
+    length(LinkedList)
+    
+from genfinite import lst
+print(length(lst))
